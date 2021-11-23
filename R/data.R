@@ -45,6 +45,7 @@
 #'  \item{month}{month when accident occurred as 3-letter abbreviation}
 #'  \item{day}{day of the month when accident occurred}
 #'  \item{hour}{hour when accident occurred, 24 hour format}
+#'  \item{wthr.cat}{the weather condition categorized into one of seven broad categories: Fair/Cloudy, Rain, Fog, Windy, Thunder Storms, Ice/Freezing Rain, or Snow}
 #'  }
 #'  @source \url{https://www.kaggle.com/sobhanmoosavi/us-accidents}
 "accidents"
