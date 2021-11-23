@@ -19,3 +19,8 @@ BugReports: https://github.com/ahvickers/accidenttracker/issues
 Depends: 
     R (>= 2.10)
 LazyData: true
+Imports: 
+    shiny,
+    leaflet,
+    rlang,
+    dplyr
