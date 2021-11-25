@@ -5,6 +5,7 @@
 #' @param choices A vector of choices for the input
 #' @param type The type of input, select for selectInput, multiple for selectInput multiple = TRUE, and checkbox for checkboxGroupInput
 #' @return A shiny widget that allows user to select from a list of choices
+#' @export
 #' @examples
 #' select_input("color", "Color By:", c("None", "Temp", "Day/Night"), "select")
 

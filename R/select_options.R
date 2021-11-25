@@ -5,6 +5,7 @@
 #' @param all Default is FALSE, when TRUE will add "All" to the vector
 #' @param none Default is FALSE, when TRUE will add "None" to the vector
 #' @return A character vector
+#' @export
 
 select_options <- function(df, col, all = FALSE, none = FALSE) {
   column <- dplyr::pull(df, var = {{col}})
