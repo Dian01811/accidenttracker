@@ -115,7 +115,8 @@ accidents <- raw_accident_data %>%
                                                              "Ice Pellets",
                                                              "Light Ice Pellets",
                                                              "Sleet"),
-                                   "Ice / Freezing Rain"))
-
+                                   "Ice / Freezing Rain")) %>%
+  dplyr::mutate(precip = replace(precip, precip == 24, 0)) # Remove incorrect precipitation measurement
+  # Value replaced with 0 as weather description was "Fair", suggesting no actual precipitation
 
 usethis::use_data(accidents, overwrite = TRUE)

@@ -32,9 +32,9 @@ List of Removed Columns
 - Astronomical_Twilight
 
 
-List of Changes to Data Set
+List of Changes to US_Accidents Data Set
 ---
-- Filtered all data to only include points from the year 2019.
+- Filtered all of the data to only include points from the year 2019.
 
 - Column names were changed in order to be in compliance with the style guide for MICR 475.
   - The names for each column were changed to the proper forms of snake case. 
@@ -48,12 +48,28 @@ List of Changes to Data Set
 
 Select Input and Select Options
 ---
-These two functions for analytically filtering and interfacing with the US Accidents data set. 
-Both functions utilize an "if" loop to determine their output
-
 - select_input
-  - Utilizes an if loop to generate a shiny widget which allows users to select different choices of variables to view the data set through. Examples of these include "color", "Day/Night" etc. 
+  - Utilizes an if loop to generate a shiny widget which allows users to select different types of inputs.. Examples of these include multiple check boxes, single option select, or multiple option select.  
   
 - select_options
   - This function exists to generate a unique character vector from a selected column when viewing the data through the shiny app. 
+  
+
+
+Histogram Plot
+---
+The function histogram_plot switches the displayed graph between a bar graph or a histogram depending on the variable plotted on the x-axis. This allows for certain variables and relationships to be more easily interpreted displayed. 
+
+- The variables "state", "day.night", "wind.dir", "side", "month", and "hour" all plot as a bar graph. 
+
+- Any other variable selected in the shinyapp will be displayed on a histogram instead. 
+
+
+
+Color pal, Color data, Legend Title
+---
+These three functions are UI functions and are designed to alter certain characteristics of the user interface for the shinyapp.
+
+- The color scheme of the map and legend are adjusted depending on the selected input variable, whether it be temperature, day/night, etc. 
+
   
