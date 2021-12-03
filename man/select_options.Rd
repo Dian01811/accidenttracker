@@ -2,7 +2,7 @@
 % Please edit documentation in R/select_options.R
 \name{select_options}
 \alias{select_options}
-\title{Create a character vector of unique values from a column}
+\title{Create a character vector of column values}
 \usage{
 select_options(df, col, all = FALSE, none = FALSE)
 }
@@ -19,5 +19,9 @@ select_options(df, col, all = FALSE, none = FALSE)
 A character vector
 }
 \description{
-Create a character vector of unique values from a column
+\code{select_options()} takes a column of a dataframe and creates a character vector
+of all unique values within that column.
+}
+\details{
+Used to create a list of options from the unique values within a column.
 }

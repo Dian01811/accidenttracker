@@ -23,4 +23,11 @@ Imports:
     shiny,
     leaflet,
     rlang,
-    dplyr
+    dplyr,
+    ggplot2
+Suggests: 
+    rmarkdown,
+    knitr,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+Config/testthat/edition: 3

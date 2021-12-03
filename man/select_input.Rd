@@ -2,7 +2,7 @@
 % Please edit documentation in R/select_input.R
 \name{select_input}
 \alias{select_input}
-\title{Create input for a shiny app}
+\title{Create selector for a shiny app}
 \usage{
 select_input(inputId, label, choices, type)
 }
@@ -19,7 +19,11 @@ select_input(inputId, label, choices, type)
 A shiny widget that allows user to select from a list of choices
 }
 \description{
-Create input for a shiny app
+\code{select_input()} creates a specified shiny UI input.
+}
+\details{
+This function allows multiple different types of shiny UI input widgets to be
+created depending on the value of \code{type}
 }
 \examples{
 select_input("color", "Color By:", c("None", "Temp", "Day/Night"), "select")

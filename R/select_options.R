@@ -1,9 +1,15 @@
-#' Create a character vector of unique values from a column
+#' Create a character vector of column values
+#'
+#' \code{select_options()} takes a column of a dataframe and creates a character vector
+#' of all unique values within that column.
+#'
+#' Used to create a list of options from the unique values within a column.
 #'
 #' @param df A dataframe
 #' @param col The name of a column from the dataframe
 #' @param all Default is FALSE, when TRUE will add "All" to the vector
 #' @param none Default is FALSE, when TRUE will add "None" to the vector
+#'
 #' @return A character vector
 #' @export
 

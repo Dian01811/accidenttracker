@@ -1,11 +1,18 @@
-#' Create input for a shiny app
+#' Create selector for a shiny app
+#'
+#' \code{select_input()} creates a specified shiny UI input.
+#'
+#' This function allows multiple different types of shiny UI input widgets to be
+#' created depending on the value of \code{type}
 #'
 #' @param inputId A shiny input ID
 #' @param label A label for the input
 #' @param choices A vector of choices for the input
 #' @param type The type of input, select for selectInput, multiple for selectInput multiple = TRUE, and checkbox for checkboxGroupInput
+#'
 #' @return A shiny widget that allows user to select from a list of choices
 #' @export
+#'
 #' @examples
 #' select_input("color", "Color By:", c("None", "Temp", "Day/Night"), "select")
 

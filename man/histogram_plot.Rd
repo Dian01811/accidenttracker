@@ -2,12 +2,14 @@
 % Please edit documentation in R/histogram_plot.R
 \name{histogram_plot}
 \alias{histogram_plot}
-\title{Switch between histogram or bar plot based on type of data}
+\title{Choose to plot histogram or bar plot}
 \usage{
-histogram_plot(x, y)
+histogram_plot(data, x, y)
 }
 \arguments{
-\item{x}{A variable to plot}
+\item{data}{A dataframe, specifically the \code{accidents} dataset}
+
+\item{x}{A variable from \code{accidents} to plot}
 
 \item{y}{The number of bins}
 }
@@ -15,5 +17,10 @@ histogram_plot(x, y)
 A histogram plot if continuous or a bar plot if categorical
 }
 \description{
-Switch between histogram or bar plot based on type of data
+\code{histogram_plot()} plots a histogram if a continuous variable from \code{accidents}
+is chosen or a bar plot if a categorical variable is chosen.
+}
+\details{
+Creates a bar plot if a categorical variable is chosen to prevent issues
+with plotting non-continuous data as a histogram.
 }
