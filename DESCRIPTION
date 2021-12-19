@@ -1,6 +1,6 @@
 Package: accidenttracker
 Title: Tracking US Accidents in 2019 With A Shiny App
-Version: 0.1.3
+Version: 1.0.0
 Authors@R: c(
     person("Abigail", "Vickers", , "avicker5@utk.edu", role = c("aut", "cre")),
     person("Brandon", "Estrem", , "bestrem@vols.utk.edu", role = "aut"),

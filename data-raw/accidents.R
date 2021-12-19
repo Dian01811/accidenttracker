@@ -116,7 +116,16 @@ accidents <- raw_accident_data %>%
                                                              "Light Ice Pellets",
                                                              "Sleet"),
                                    "Ice / Freezing Rain")) %>%
-  dplyr::mutate(precip = replace(precip, precip == 24, 0)) # Remove incorrect precipitation measurement
+  # Remove incorrect precipitation measurement
   # Value replaced with 0 as weather description was "Fair", suggesting no actual precipitation
+  dplyr::mutate(precip = replace(precip, precip == 24, 0)) %>%
+  # Consolidating wind.dir values that have equivalent meaning but are considered unique due to capitalization differences
+  dplyr::mutate(wind.dir = replace(wind.dir, wind.dir == "Calm", "CALM")) %>%
+  dplyr::mutate(wind.dir = replace(wind.dir, wind.dir == "East", "E")) %>%
+  dplyr::mutate(wind.dir = replace(wind.dir, wind.dir == "West", "W")) %>%
+  dplyr::mutate(wind.dir = replace(wind.dir, wind.dir == "South", "S")) %>%
+  dplyr::mutate(wind.dir = replace(wind.dir, wind.dir == "North", "N")) %>%
+  dplyr::mutate(wind.dir = replace(wind.dir, wind.dir == "Variable", "VAR"))
+
 
 usethis::use_data(accidents, overwrite = TRUE)
